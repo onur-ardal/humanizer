@@ -56,6 +56,7 @@ Ya da düz Türkçe iste: "Bu metin yapay zekâ gibi durmasın: [metin]". Kendi 
 | T7 | Zorla çevrilmiş teknik terim, parantez içi İngilizce | "dağıtım (deployment) işlem hattı (pipeline)" | "deployment pipeline'ı" |
 | T8 | Hitap tutarsızlığı | "yapmalısınız… bak", "Değerli okuyucular" | Tek hitap |
 | T9 | Sosyal medya kancaları | "Büyük bir gururla duyurmak isterim ki 🚀", "🧵 Bir thread 👇" | Asıl iddiayla başla |
+| T10 | Yüklemsiz isim öbeği cümlesi | "Kurumsal standartlara uygun, korunaklı bir altyapı." | "Altyapı kurumsal standartlara uygun." |
 
 ## Upstream ile senkron
 

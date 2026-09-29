@@ -2,6 +2,7 @@
 
 ## Türkçe fork (onur-ardal)
 
+- T10 eklendi: yüklemsiz isim öbeği cümlesi ("…, korunaklı bir altyapı."). §20 web ve uygulama arayüzündeki başlıklar için gevşetildi. Web ve landing sayfası metni için yapıya dokunmama notu eklendi. Bir hizmetler sayfasında yapılan denemeden çıktı.
 - Türkçe metin desteği eklendi. Kurallar `references/turkce.md` içinde: 26 kalıbın Türkçe izleme listeleri, Türkçede uygulanmayan kurallar (§10, §21) ve Türkçeye özgü dokuz belirti (T1-T9).
 - `SKILL.md`'ye metin Türkçeyse bu dosyayı okuyan kısa bir kanca ve açıklamaya Türkçe tetikleyiciler eklendi. İngilizce kalıplar değişmedi.
 - README Türkçe girişle başlıyor; kurulum komutları bu fork'u gösteriyor.
