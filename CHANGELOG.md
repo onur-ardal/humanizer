@@ -1,5 +1,11 @@
 # Changelog
 
+## Türkçe fork (onur-ardal)
+
+- Türkçe metin desteği eklendi. Kurallar `references/turkce.md` içinde: 26 kalıbın Türkçe izleme listeleri, Türkçede uygulanmayan kurallar (§10, §21) ve Türkçeye özgü dokuz belirti (T1-T9).
+- `SKILL.md`'ye metin Türkçeyse bu dosyayı okuyan kısa bir kanca ve açıklamaya Türkçe tetikleyiciler eklendi. İngilizce kalıplar değişmedi.
+- README Türkçe girişle başlıyor; kurulum komutları bu fork'u gösteriyor.
+
 ## 3.1.0
 
 - Added pattern #26 and section F for replies that re-explain context the reader already has (#269). It acts on replies, not standalone writing. 26 patterns total.

@@ -1,6 +1,76 @@
-# Humanizer
+# Humanizer (Türkçe destekli)
 
-[![GitHub stars](https://img.shields.io/github/stars/blader/humanizer?style=flat)](https://github.com/blader/humanizer/stargazers) [![skills.sh installs](https://skills.sh/b/blader/humanizer)](https://skills.sh/blader/humanizer)
+[![GitHub stars](https://img.shields.io/github/stars/onur-ardal/humanizer?style=flat)](https://github.com/onur-ardal/humanizer/stargazers) [![Upstream](https://img.shields.io/badge/upstream-blader%2Fhumanizer-blue)](https://github.com/blader/humanizer)
+
+Yapay zekâya yazdırdığın metni, söylediğini değiştirmeden bir insan yazmış gibi okunur hâle getiren agent skill'i. Bu repo [blader/humanizer](https://github.com/blader/humanizer)'ın Türkçe destekli bir fork'udur: İngilizce kalıpların hepsi olduğu gibi duruyor, üstüne Türkçe metin için ayrı bir kural katmanı ekledik.
+
+Türkçe yapay zekâ metni iki şeyle ele verir kendini. Birincisi her dilde görülen alışkanlıklar: "sadece X değil, aynı zamanda Y", tek satırlık dramatik kapanışlar, üçlemeler, uzun tireler. İkincisi Türkçeye özgü izler: art arda -mektedir, her paragrafı "Bu bağlamda" diye açmak, "güçlü bir ekibe sahibiz" gibi İngilizceden taşınmış yapılar, "dağıtım (deployment)" gibi zorla çevrilmiş teknik terimler. Skill metin Türkçeyse [`references/turkce.md`](references/turkce.md) dosyasını da okuyup ikisini birlikte uygular.
+
+**Önce:**
+> Günümüzde yapay zekânın hızla gelişmesiyle birlikte, yazılım geliştirme süreçleri köklü bir dönüşüm geçirmektedir. Bu bağlamda, ekibimiz sadece kod yazmakla kalmayıp, aynı zamanda müşterilerimize uçtan uca değer katan çözümler sunmaktadır. Kapsamlı deneyimimiz, dinamik yapımız ve yenilikçi yaklaşımımız ile sektörde fark yaratıyoruz. Peki bunun sırrı ne? Tek kelimeyle: tutku. 🚀
+
+**Sonra:**
+> Yapay zekâ yazılım geliştirmeyi değiştiriyor. Ekibimiz deneyimli ve müşterilerimiz için projeleri uçtan uca üstleniyor.
+
+Humanizer insan okur için düzenler. Yapay zekâ dedektörlerini atlatmak hedefi değildir.
+
+## Kurulum
+
+Claude.ai ve Claude Desktop: repoyu ZIP olarak indir (**Code → Download ZIP**) ve Ayarlar'dan skill olarak yükle.
+
+Claude Code:
+
+```text
+/plugin marketplace add onur-ardal/humanizer
+/plugin install humanizer@humanizer
+```
+
+Diğer agent'lar (Codex, Cursor, Gemini CLI vb.):
+
+```bash
+npx skills add onur-ardal/humanizer --global --agent '*'
+```
+
+## Kullanım
+
+```
+/humanizer
+
+[metni buraya yapıştır]
+```
+
+Ya da düz Türkçe iste: "Bu metin yapay zekâ gibi durmasın: [metin]". Kendi sesine uysun istersen önce kendi yazdığın 2-3 paragrafı örnek olarak ver.
+
+## Türkçeye özgü kalıplar
+
+26 İngilizce kalıbın Türkçe karşılıkları `references/turkce.md` içinde. Bunlara ek olarak:
+
+| # | Kalıp | Önce | Sonra |
+|---|-------|------|-------|
+| T1 | -mektedir zinciri, yapanı belli olmayan cümle | "güncellemeler gerçekleştirilmiştir. İyileştirmeler sağlanmıştır." | "Sistemi güncelledik ve iyileştirdik." |
+| T2 | Her paragrafın başında bağlaç | "Bu bağlamda… Öte yandan… Sonuç olarak…" | Bağlacı sil, ilişkiyi cümle kursun |
+| T3 | Boş genel giriş ve kapanış | "Günümüzde teknolojinin hızla gelişmesiyle…" | İlk gerçek iddiayla başla |
+| T4 | Çeviri kokan yapı | "güçlü bir ekibe sahibiz", "günün sonunda", "Bizim ekibimiz" | "ekibimiz güçlü", "eninde sonunda", "Ekibimiz" |
+| T5 | Uzun ortaç zinciri, hep sonda biten cümle | "…karşılaştıkları sorunların çözülmesine yönelik geliştirilen yöntem" | İki cümleye böl; yerinde devrik cümle |
+| T6 | İngilizce noktalama ve yazım | "A, B, ve C", "3.5", "50%", "API'a" | "A, B ve C", "3,5", "%50", "API'ye" |
+| T7 | Zorla çevrilmiş teknik terim, parantez içi İngilizce | "dağıtım (deployment) işlem hattı (pipeline)" | "deployment pipeline'ı" |
+| T8 | Hitap tutarsızlığı | "yapmalısınız… bak", "Değerli okuyucular" | Tek hitap |
+| T9 | Sosyal medya kancaları | "Büyük bir gururla duyurmak isterim ki 🚀", "🧵 Bir thread 👇" | Asıl iddiayla başla |
+
+## Upstream ile senkron
+
+İngilizce çekirdek (`SKILL.md`) bilerek blader'ın sürümüne yakın tutuluyor; Türkçe kurallar ayrı dosyada. blader yeni sürüm çıkardığında:
+
+```bash
+git remote add upstream https://github.com/blader/humanizer.git
+git fetch upstream && git merge upstream/main
+```
+
+Çakışma genelde yalnızca README ve SKILL.md'deki birkaç satırlık Türkçe kancada çıkar.
+
+---
+
+# Humanizer (English, upstream documentation)
 
 Humanizer makes AI-written text sound like a person wrote it, without changing what it says. It is built on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), the guide Wikipedia editors use to catch AI-generated text, and it works in Claude Code, Codex, and any other agent that supports skills.
 
@@ -33,16 +103,16 @@ Once installed, the skill answers to `/humanizer`.
 ### Claude Code
 
 ```text
-/plugin marketplace add blader/humanizer
+/plugin marketplace add onur-ardal/humanizer
 /plugin install humanizer@humanizer
 ```
 
-The plugin answers to `/humanizer:humanizer`. It needs Claude Code 2.1.142 or newer; on older versions, use `npx skills add blader/humanizer --global --agent claude-code`.
+The plugin answers to `/humanizer:humanizer`. It needs Claude Code 2.1.142 or newer; on older versions, use `npx skills add onur-ardal/humanizer --global --agent claude-code`.
 
 ### Codex
 
 ```bash
-npx skills add blader/humanizer --global --agent codex
+npx skills add onur-ardal/humanizer --global --agent codex
 ```
 
 ### Claude.ai and Claude Desktop
@@ -52,7 +122,7 @@ Download this repository as a ZIP (**Code → Download ZIP**) and upload it as a
 ### Other agents
 
 ```bash
-npx skills add blader/humanizer --global --agent '*'
+npx skills add onur-ardal/humanizer --global --agent '*'
 ```
 
 This installs Humanizer for every agent the Skills CLI supports, including Gemini CLI, GitHub Copilot, and Windsurf. Leave off `--global` in any command above to install it only in the current project. For an agent the Skills CLI does not know, copy `SKILL.md` into its skill folder.
@@ -192,6 +262,8 @@ The patterns are numbered by strength and frequency. The first five justify an e
 
 ## Sources
 
+- Turkish additions: [`references/turkce.md`](references/turkce.md).
+
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) is the source for the pattern list.
 - [WikiProject AI Cleanup](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup) maintains the page.
 
@@ -201,6 +273,6 @@ See [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
-MIT
+MIT. Original work © 2025 Siqi Chen ([blader/humanizer](https://github.com/blader/humanizer)); Turkish additions © 2026 onur-ardal.
 
 If Humanizer helps you, a star helps other people find it.

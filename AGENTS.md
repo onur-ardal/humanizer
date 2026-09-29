@@ -11,6 +11,7 @@ Keep the skill portable. Do not write instructions that limit it to one or two a
 ## Key files
 
 - `SKILL.md` is the source of truth and the repo's only skill file. It contains portable YAML metadata, an account of why AI text sounds the way it does, and numbered patterns grouped in six sections and ordered by strength and frequency.
+- `references/turkce.md` holds the Turkish rules: Turkish watch lists for the numbered patterns and Turkish-only tells numbered T1, T2, and so on. It is written in Turkish. `SKILL.md` loads it only when the text is Turkish.
 - `README.md` explains installation, use, and patterns.
 - `CHANGELOG.md` holds the release notes, newest first. Old notes keep the pattern numbers their release used.
 - `.claude-plugin/plugin.json` describes the Claude plugin and points its skill loader at the root `SKILL.md`.
@@ -20,6 +21,8 @@ Keep the skill portable. Do not write instructions that limit it to one or two a
 - `scripts/validate-package.py` checks package files and shared values.
 
 ## Rules for changes
+
+This repo is a fork of blader/humanizer. Keep Turkish changes in `references/turkce.md` and keep the English `SKILL.md` close to upstream so upstream releases merge cleanly. When a pattern number changes upstream, update the § numbers in `references/turkce.md`.
 
 Keep `SKILL.md` and `README.md` in sync.
 
