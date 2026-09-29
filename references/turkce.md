@@ -1,6 +1,6 @@
 # Türkçe metin için ek kurallar
 
-Metin Türkçeyse bu dosyayı SKILL.md ile birlikte uygula. SKILL.md'deki 26 kalıp Türkçede de geçerli. Bu dosya üç şey ekler: her kalıbın Türkçede nasıl göründüğü, Türkçede işlemeyen kurallar ve yalnızca Türkçede görülen belirtiler (T1-T9). İkisi çelişirse bu dosya geçerlidir.
+Metin Türkçeyse bu dosyayı SKILL.md ile birlikte uygula. SKILL.md'deki 26 kalıp Türkçede de geçerli. Bu dosya üç şey ekler: her kalıbın Türkçede nasıl göründüğü, Türkçede işlemeyen kurallar ve yalnızca Türkçede görülen belirtiler (T1-T10). İkisi çelişirse bu dosya geçerlidir.
 
 ## Türkçede neden ayrı bir katman gerekiyor
 
@@ -27,7 +27,7 @@ Numaralar SKILL.md ile aynı. Aşağıdaki ifadeler izleme listelerinin Türkçe
 - **§16 Reklam dili:** eşsiz; büyüleyici; nefes kesen; kalbinde yer alan; zengin kültürel miras; benzersiz bir deneyim sunan; göz alıcı; mutlaka görülmesi gereken.
 - **§17 Ödünç otorite:** uzmanlara göre; araştırmalar gösteriyor ki (kaynak verilmeden); pek çok kişiye göre; sektör raporlarına göre.
 - **§18 Basit yüklemden kaçmak:** … olarak hizmet vermektedir; … konumundadır; … niteliğindedir; … sunmaktadır; … bünyesinde barındırmaktadır; …'e sahiptir (T4). Yerine "-dır", "var" ya da düz zaman kullan.
-- **§20 Süslü başlık:** İngilizce tarzı, her sözcüğü büyük harfle başlayan başlık Türkçede çeviri izidir. Cümle düzeninde yaz.
+- **§20 Süslü başlık:** Düzyazıdaki bölüm başlıklarında her sözcüğü büyük harfle başlatmak İngilizce alışkanlığıdır; cümle düzeninde yaz. Web sitesi ve uygulamadaki kart, menü, buton ve sayfa başlıkları istisnadır: Türkçe arayüzde her sözcüğü büyük yazmak yaygın ve doğaldır, bunlara dokunma.
 - **§21 Kıvrık tırnak:** Türkçe metinde iki tırnak türü de olağan; bu kalıbı uygulama. Noktalama için T6'ya bak.
 - **§22 Sohbet artığı:** Elbette!; Tabii ki!; Harika bir soru!; Umarım yardımcı olur; Başka bir konuda yardımcı olabilir miyim?; İşte … hakkında kısa bir özet:
 - **§23 Bilgi sınırı:** mevcut kaynaklarda sınırlı bilgi bulunmakla birlikte; son güncellememe göre; kamuya açık bilgi bulunmamaktadır; muhtemelen … büyümüştür.
@@ -119,6 +119,19 @@ Yazım hatasını düzelt ama bu düzeltme anlamı değiştirmesin. Yazar şapka
 **Sonra:**
 > Yeni projemizi ekiple birlikte yayına aldık.
 
+### T10. Yüklemsiz isim öbeği cümlesi
+
+**Belirti:** Yüklemi olmayan, bir isim öbeğiyle biten cümle: "Kurumsal standartlara uygun, korunaklı bir altyapı." "Hızlı ve bakımı kolay arayüzler." "Daha hızlı geliştirme, daha düşük maliyet." Pazarlama ve web metninde kartların ya da paragrafların çoğu böyle kapanır.
+**Sorun:** İngilizce slogan yapısının ("Secure, enterprise-grade infrastructure.") Türkçeye taşınmış hâli. Tek tek masum görünür, ama art arda gelince metin broşür gibi okunur ve kimin ne yaptığı kaybolur. Cümleye yüklem ver ya da öbeği önceki cümleye bağla. Başlık, buton ve slogan satırı gibi tek başına duran kısa etiketler bu kalıba girmez. Metinde bir iki tane varsa *tek başına zayıf*; her kart böyle bitiyorsa güçlüdür.
+**Önce:**
+> Veri güvenliği ve yetkilendirme en baştan tasarıma dahildir. Kurumsal standartlara uygun, korunaklı bir altyapı.
+**Sonra:**
+> Veri güvenliğini ve yetkilendirmeyi tasarımın ilk gününden ele alıyoruz. Altyapı kurumsal güvenlik standartlarına uygun.
+
+## Web ve landing sayfası metni
+
+Web sayfasında yapı tasarımdan gelir. Kategori ve kart sayısına, kart başlıklarına ve metindeki iç notlara ("Kategori açıklaması:" gibi) dokunma. Üç kartlı düzen üçleme sayılmaz; §6'yı yalnızca kartların içindeki cümlelere uygula. Kartlar arasındaki tekrara bak: her kartın aynı biçimde kapanması T10'dur, aynı ifadenin ("ihtiyacınıza en uygun") birden fazla kartta geçmesi de düzeltilmesi gereken bir tekrardır. Kart metni bir iki cümleyi geçmesin.
+
 ## Ses: Türkçede korunacak insan izleri
 
 - Konuşma dilinin küçük sözcükleri yerinde kullanılmışsa kalır: ya, yani, işte, bayağı, epey, açıkçası (cümle içinde).
@@ -128,7 +141,7 @@ Yazım hatasını düzelt ama bu düzeltme anlamı değiştirmesin. Yazar şapka
 
 ## Denetim adımına ekle
 
-Taslağı denetlerken SKILL.md'deki listeye ek olarak şunları ara: -mektedir zinciri (T1), paragraf başı bağlaç (T2), boş genel giriş (T3), "sahip olmak" ve gereksiz "bir" (T4), "ve" öncesi virgül ve ondalık nokta (T6), parantez içi İngilizce (T7). Silinen kalıbın yerine aynı işi gören başka bir ifade koymak kalıbı çözmez.
+Taslağı denetlerken SKILL.md'deki listeye ek olarak şunları ara: -mektedir zinciri (T1), paragraf başı bağlaç (T2), boş genel giriş (T3), "sahip olmak" ve gereksiz "bir" (T4), "ve" öncesi virgül ve ondalık nokta (T6), parantez içi İngilizce (T7), yüklemsiz isim öbeği (T10). Silinen kalıbın yerine aynı işi gören başka bir ifade koymak kalıbı çözmez.
 
 ## Kaynaklar
 
